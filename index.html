@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Villa Rustica - apartamenty w Polańczyku nad Soliną, Bieszczady</title>
+<meta name="description" content="Villa Rustica - klimatyzowane apartamenty w centrum uzdrowiska Polańczyk nad Jeziorem Solińskim. Rezerwacja online, zameldowanie bez recepcji, klucz w telefonie. Tel. 530 090 530.">
+<meta name="theme-color" content="#27325A">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="img/hero-m-760.webp" imagesrcset="img/hero-m-480.webp 480w, img/hero-m-760.webp 760w" imagesizes="100vw" media="(max-width:767px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-1600.webp" imagesrcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2000.webp 2000w" imagesizes="100vw" media="(min-width:768px)" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="fonts/lora-rdzen.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/jost-rdzen.woff2" crossorigin>
+<style>
+@font-face{font-family:"Lora";font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/lora-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026}
+@font-face{font-family:"Lora";font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/lora-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:"Jost";font-style:normal;font-weight:300 700;font-display:swap;src:url(fonts/jost-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026}
+@font-face{font-family:"Jost";font-style:normal;font-weight:300 700;font-display:swap;src:url(fonts/jost-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+:root{--graf:#58585A;--ink:#202124;--mut:#55575C;--navy:#27325A;--navy2:#1E2747;--navyd:#161D36;--sz:#EEF0F2;--line:#D6D9DE;--hh:68px;--w:calc(100vw - 32px);--pas:calc(100vw - 32px);--gap:clamp(64px,7vw,136px)}
+@media (min-width:768px){:root{--w:min(92vw,1720px);--pas:min(calc(100vw - 2*clamp(16px,3vw,56px)),1840px)}}
+@media (min-width:1000px){:root{--hh:88px}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hh);-webkit-text-size-adjust:100%}
+body{margin:0;font-family:Jost,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:clamp(17px,.25vw + 15.5px,20px);line-height:1.62;color:var(--ink);background:#fff;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:Lora,Georgia,serif;font-weight:500;line-height:1.12;letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:clamp(32px,3.1vw,60px);color:var(--navy)}
+h3{font-size:clamp(21px,1.35vw,27px)}
+p{margin:0}
+.wrap{width:var(--w);margin:0 auto}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:8px;z-index:99;background:#fff;padding:8px 12px}
+:focus-visible{outline:2px solid var(--navy);outline-offset:3px}
+
+/* naglowek sekcji: tytul i linia ramy z logo */
+.tyt{display:flex;align-items:center;gap:clamp(18px,2vw,36px)}
+.tyt::after{content:"";flex:1;height:1px;background:currentColor;opacity:.35;min-width:40px;transform:translateY(.15em)}
+.tyt{color:var(--navy)}
+
+/* przycisk: prostokat z cienka rama jak w logo */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:58px;padding:0 34px;background:var(--navy);color:#fff;font:500 1.06rem/1 Jost,system-ui,sans-serif;letter-spacing:.02em;text-decoration:none;border:0;cursor:pointer;transition:background .15s;-webkit-tap-highlight-color:transparent}
+.btn::after{content:"";position:absolute;inset:-6px;border:1px solid var(--navy);opacity:.45;pointer-events:none;transition:inset .2s,opacity .2s}
+.btn:hover{background:var(--navy2)}
+.btn:hover::after{inset:-4px;opacity:.8}
+.btn.bia{background:#fff;color:var(--navy)}
+.btn.bia::after{border-color:#fff;opacity:.7}
+.btn.bia:hover{background:#E9ECF2}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* gorny pasek */
+.top{position:fixed;top:0;left:0;right:0;z-index:50;height:var(--hh);color:#fff;transition:background .25s,box-shadow .25s,color .25s}
+.top.sc{background:#fff;color:var(--ink);box-shadow:0 1px 0 var(--line),0 8px 24px rgba(20,25,45,.07)}
+.top .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:block;color:inherit;text-decoration:none;line-height:0}
+.logo svg{height:44px;width:127px}
+.top.sc .logo{color:var(--graf)}
+@media (min-width:1000px){.logo svg{height:58px;width:168px}}
+.menu{display:flex;align-items:center;gap:clamp(18px,2.2vw,44px)}
+.menu a{text-decoration:none;font-weight:450;font-size:1.02rem;letter-spacing:.02em;position:relative;padding:6px 0}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:currentColor;transform:scaleX(0);transition:transform .2s}
+.menu a.on::after,.menu a:not(.btn):hover::after{transform:scaleX(1)}
+.menu .tel{white-space:nowrap;font-weight:500}
+.menu .btn{min-height:48px;padding:0 24px;font-size:1rem;background:#fff;color:var(--navy)}
+.menu .btn::after{border-color:#fff}
+.top.sc .menu .btn{background:var(--navy);color:#fff}
+.top.sc .menu .btn::after{border-color:var(--navy)}
+.burger{display:none}
+@media (max-width:1240px){.menu .tel{display:none}}
+@media (max-width:999px){
+  .menu{position:fixed;inset:var(--hh) 0 auto 0;background:#fff;color:var(--ink);flex-direction:column;align-items:stretch;gap:0;padding:4px 16px 24px;box-shadow:0 22px 30px rgba(20,25,45,.18);border-top:1px solid var(--line);transform:translateY(-10px);opacity:0;visibility:hidden;transition:opacity .2s,transform .2s,visibility .2s}
+  .menu.open{opacity:1;transform:none;visibility:visible}
+  .menu a{padding:15px 2px;font-size:1.12rem;border-bottom:1px solid var(--line)}
+  .menu a:not(.btn)::after{display:none}
+  .menu a.on{color:var(--navy);font-weight:600}
+  .menu .tel{display:block}
+  .menu .btn,.top.sc .menu .btn{margin:22px 6px 6px;min-height:54px;background:var(--navy);color:#fff;border-bottom:0}
+  .menu .btn::after,.top.sc .menu .btn::after{border-color:var(--navy)}
+  .burger{display:flex;align-items:center;justify-content:center;width:48px;height:48px;margin-right:-10px;background:none;border:0;cursor:pointer;color:inherit}
+  .burger span,.burger span::before,.burger span::after{display:block;width:26px;height:2px;background:currentColor;position:relative;transition:transform .2s,background .2s}
+  .burger span::before,.burger span::after{content:"";position:absolute;left:0}
+  .burger span::before{top:-8px}.burger span::after{top:8px}
+  .burger[aria-expanded=true] span{background:transparent}
+  .burger[aria-expanded=true] span::before{transform:translateY(8px) rotate(45deg)}
+  .burger[aria-expanded=true] span::after{transform:translateY(-8px) rotate(-45deg)}
+  .top.open{background:#fff;color:var(--ink)}
+  .top.open .logo{color:var(--graf)}
+}
+
+/* pierwszy ekran: Solina w ramie z logo */
+.hero{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:100svh;color:#fff;background:#3d5878;isolation:isolate}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%;z-index:-2}
+.hero picture img{object-fit:cover;object-position:50% 50%}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(14,20,38,.42) 0,rgba(14,20,38,0) 22%,rgba(14,20,38,0) 44%,rgba(14,20,38,.52) 72%,rgba(14,20,38,.7) 100%)}
+.rama{position:absolute;z-index:-1;pointer-events:none;inset:calc(var(--hh) + 6px) clamp(12px,2.2vw,40px) clamp(12px,2.2vw,40px);border:1px solid rgba(255,255,255,.62)}
+.hero .tresc{width:var(--w);margin:0 auto;padding:calc(var(--hh) + 64px) clamp(14px,2.4vw,52px) clamp(46px,7vh,96px)}
+.hero .jelen{display:block;width:clamp(70px,6vw,110px);height:auto;aspect-ratio:120/100;margin:0 0 clamp(14px,1.6vw,22px) -4px;color:#fff;opacity:.95}
+.hero h1{font-size:clamp(36px,4.6vw,88px);font-weight:500;max-width:16ch;text-shadow:0 2px 24px rgba(0,0,0,.25)}
+.hero .lead{margin-top:clamp(16px,1.6vw,24px);font-size:clamp(18px,1.15vw,23px);line-height:1.5;max-width:44ch;color:#F1F3F7}
+.hero .akcje{margin-top:clamp(28px,3vw,44px);display:flex;flex-wrap:wrap;align-items:center;gap:22px 34px}
+.hero .tel{color:#E6EAF2;text-decoration:none;font-size:1.05rem;letter-spacing:.02em}.hero .tel b{color:#fff;font-weight:500}
+@media (min-width:1000px){.hero h1{max-width:20ch}.logo svg{height:64px;width:185px}}
+@media (min-width:1700px){.logo svg{height:72px;width:208px}}
+@media (max-width:767px){
+  .hero .tresc{padding:calc(var(--hh) + 40px) 22px 46px}
+  .hero .akcje{gap:22px}
+  .hero .btn{width:100%}
+}
+
+/* apartamenty */
+.sek{padding:var(--gap) 0}
+.apart .wst{display:grid;gap:22px clamp(40px,6vw,120px);margin-top:clamp(24px,2.4vw,40px)}
+.apart .wst p{max-width:62ch;color:var(--mut)}
+.apart .wst p:first-child{color:var(--ink);font-size:1.12em}
+@media (min-width:1000px){.apart .wst{grid-template-columns:1fr 1fr}}
+
+/* pas zdjec (symetryczny, w kontenerze pasa) */
+.pas{width:var(--pas);margin:clamp(34px,3.4vw,56px) auto 0;position:relative}
+.pas .tor{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;cursor:grab;overscroll-behavior-x:contain}
+.pas .tor::-webkit-scrollbar{display:none}
+.pas .tor.drag{cursor:grabbing;scroll-snap-type:none}
+.kad{flex:0 0 calc((100% - 14px*1)/1.18);scroll-snap-align:start;position:relative;margin:0;padding:0;border:0;background:var(--sz);aspect-ratio:4/3;cursor:zoom-in;overflow:hidden}
+.kad img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.kad::after{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,0);transition:border-color .25s;pointer-events:none}
+.kad:hover::after{border-color:rgba(255,255,255,.75)}
+.kad:hover img{transform:scale(1.025)}
+@media (min-width:600px){.kad{flex-basis:calc((100% - 14px)/1.45)}}
+@media (min-width:900px){.kad{flex-basis:calc((100% - 14px*2)/2.3)}}
+@media (min-width:1280px){.kad{flex-basis:calc((100% - 14px*2)/3)}}
+@media (min-width:1700px){.kad{flex-basis:calc((100% - 14px*3)/4)}}
+.ster{display:flex;align-items:center;justify-content:flex-end;gap:14px;margin-top:18px;color:var(--mut);font-size:.95rem}
+.ster button{width:50px;height:50px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);color:var(--navy);cursor:pointer;transition:border-color .15s,opacity .15s}
+.ster button:hover{border-color:var(--navy)}
+.ster button:disabled{opacity:.35;cursor:default;border-color:var(--line)}
+.ster svg{width:20px;height:20px}
+.ster .licz{margin-right:auto;font-variant-numeric:tabular-nums}
+
+/* klucz w telefonie - mocna sekcja w granacie z kratki wnetrz */
+.klucz{background:var(--navy);color:#fff;padding:var(--gap) 0;overflow:hidden}
+.klucz .wrap{display:grid;gap:clamp(40px,5vw,96px);align-items:center}
+.klucz h2{color:#fff}
+.klucz .tyt{color:#fff}
+.klucz .opis{margin-top:24px;max-width:56ch;color:#D9DEEA}
+.klucz ul{list-style:none;margin:clamp(30px,3vw,44px) 0 0;padding:0;border-top:1px solid rgba(255,255,255,.22)}
+.klucz li{display:grid;gap:4px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.22)}
+.klucz li b{font:500 1.12em/1.3 Lora,Georgia,serif;color:#fff}
+.klucz li span{color:#C9D0E0;font-size:.96em}
+.klucz li i{grid-row:1/3;width:26px;height:26px;margin-top:2px;border:1px solid rgba(255,255,255,.55);position:relative}
+.klucz li i::after{content:"";position:absolute;left:6px;right:6px;top:50%;height:1px;background:#fff}
+.klucz figure{margin:0;position:relative}
+.klucz figure img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.klucz figure::after{content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.6);pointer-events:none}
+@media (min-width:1000px){.klucz .wrap{grid-template-columns:1.25fr .75fr}.klucz figure{max-width:560px;justify-self:end;width:100%}}
+@media (max-width:999px){.klucz figure img{aspect-ratio:4/3}}
+
+/* rezerwacja */
+.rez{background:var(--sz)}
+.rez .wst{display:grid;gap:20px clamp(40px,6vw,120px);margin-top:clamp(24px,2.4vw,40px);align-items:end}
+.rez .wst p{max-width:60ch;color:var(--mut)}
+@media (min-width:1000px){.rez .wst{grid-template-columns:1fr auto}}
+.okno{margin-top:clamp(30px,3vw,48px);position:relative;min-height:clamp(320px,34vw,560px);display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 22px;color:#fff;background:var(--navy2);overflow:hidden;isolation:isolate}
+.okno>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.okno::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(18,24,46,.55)}
+.okno::after{content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.6);pointer-events:none}
+.okno .w{position:relative;max-width:560px}
+.okno h3{font-size:clamp(26px,2.2vw,42px)}
+.okno .w p{color:#E3E7F0;margin:12px 0 30px}
+.okno iframe{position:relative;display:block;width:100%;height:880px;border:0;background:#fff}
+.okno.zal{padding:0;display:block;background:#fff;border:1px solid var(--line);color:inherit}
+.okno.zal::before,.okno.zal::after{display:none}
+
+/* okolica */
+.okol .wst{display:grid;gap:22px clamp(40px,6vw,120px);margin-top:clamp(24px,2.4vw,40px)}
+.okol .wst p{max-width:62ch;color:var(--mut)}
+.okol .wst p:first-child{color:var(--ink);font-size:1.12em}
+@media (min-width:1000px){.okol .wst{grid-template-columns:1fr 1fr}}
+
+/* cafe */
+.cafe{padding:0 0 var(--gap)}
+.cafe .wrap{display:grid;gap:clamp(28px,4vw,80px);align-items:center}
+.cafe figure{margin:0;position:relative}
+.cafe figure img{width:100%;aspect-ratio:1190/479;object-fit:cover}
+.cafe figure::after{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,.7);pointer-events:none}
+.cafe h2{font-size:clamp(28px,2.4vw,46px)}
+.cafe p{margin-top:18px;color:var(--mut);max-width:46ch}
+@media (min-width:1000px){.cafe .wrap{grid-template-columns:1.5fr 1fr}}
+@media (max-width:999px){.cafe figure img{aspect-ratio:16/10}}
+
+/* kontakt */
+.kont{background:var(--sz)}
+.kont .wrap{display:grid;gap:clamp(40px,5vw,96px)}
+@media (min-width:1000px){.kont .wrap{grid-template-columns:1fr 1.1fr}}
+.dane{margin-top:28px;display:grid;gap:4px;font-size:1.06em}
+.dane a{text-decoration:none}
+.dane .duzy{font:500 clamp(26px,2vw,36px)/1.2 Lora,Georgia,serif;color:var(--navy);margin:6px 0}
+.dane .duzy:hover{text-decoration:underline;text-underline-offset:5px}
+.mapa{margin-top:32px;position:relative;aspect-ratio:16/10;background:#dfe3e8;border:1px solid var(--line)}
+.mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.mapa .zg{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:20px;color:var(--mut)}
+form{background:#fff;padding:clamp(24px,3vw,48px);border:1px solid var(--line);display:grid;gap:18px;align-self:start}
+form h3{color:var(--navy)}
+form .r2{display:grid;gap:18px}
+@media (min-width:600px){form .r2{grid-template-columns:1fr 1fr}}
+label{display:grid;gap:6px;font-size:.92em;color:var(--mut)}
+input,textarea,select{font:inherit;font-size:1rem;color:var(--ink);border:1px solid #C3C8D0;background:#fff;padding:13px 14px;border-radius:0;width:100%}
+input:focus,textarea:focus{outline:2px solid var(--navy);outline-offset:-1px;border-color:var(--navy)}
+textarea{min-height:120px;resize:vertical}
+.zgoda{display:flex;gap:10px;align-items:flex-start;font-size:.86em}
+.zgoda input{width:20px;height:20px;flex:none;margin-top:2px}
+form .btn{justify-self:start;margin:6px 6px 0}
+form .ok{display:none;color:var(--navy);font-weight:500}
+form.wyslano .ok{display:block}
+.uwaga{font-size:.86em;color:var(--mut)}
+
+/* stopka */
+.stopka{background:var(--navyd);color:#B9C1D3;padding:clamp(56px,6vw,96px) 0 28px;font-size:.96em}
+.stopka .wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px 28px}
+.stopka .logo{grid-column:1/-1;color:#fff}
+.stopka .logo svg{height:64px;width:185px}
+.stopka h4{margin:0 0 10px;color:#fff;font:500 1.05rem/1.3 Lora,Georgia,serif}
+.stopka ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.stopka a{text-decoration:none}.stopka a:hover{color:#fff}
+.stopka .fe{grid-column:1/-1}
+@media (min-width:900px){.stopka .fe{grid-column:auto}}
+.stopka .dol{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:.9em}
+@media (min-width:900px){.stopka .wrap{grid-template-columns:1.3fr 1fr 1fr 1fr}.stopka .logo{grid-column:auto;align-self:start}}
+
+/* pasek na telefonie */
+.pasek{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#fff;box-shadow:0 -6px 20px rgba(20,25,45,.14);transform:translateY(110%);transition:transform .25s}
+.pasek.on{transform:none}
+.pasek .btn{flex:1;min-height:50px;padding:0 12px;font-size:1rem}
+.pasek .btn::after{display:none}
+.pasek .btn.obr{background:#fff;color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy)}
+@media (max-width:767px){.pasek{display:flex}.stopka{padding-bottom:calc(96px + env(safe-area-inset-bottom))}}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(12,15,26,.97);display:none;align-items:center;justify-content:center;flex-direction:column;padding:56px 12px 24px;touch-action:pan-y}
+.lb.on{display:flex}
+.lb img{max-width:min(100%,1500px);max-height:calc(100svh - 140px);width:auto;height:auto;object-fit:contain}
+.lb p{color:#D8DCE6;margin-top:14px;text-align:center;font-size:.95em}
+.lb button{position:absolute;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;width:52px;height:52px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb button:hover{background:rgba(255,255,255,.2)}
+.lb svg{width:24px;height:24px}
+.lb .zam{top:12px;right:12px}.lb .pop{left:12px;top:50%;transform:translateY(-50%)}.lb .nas{right:12px;top:50%;transform:translateY(-50%)}
+@media (max-width:699px){.lb .pop,.lb .nas{top:auto;bottom:18px;transform:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+</style>
+</head>
+<body>
+<a class="skip" href="#apartamenty">Przejdź do treści</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="logo" viewBox="0 0 474 164"><path fill="currentColor" fill-rule="evenodd" d="M369.3 151.8 369.0 152.3 369.0 161.5 369.5 162.0 370.5 161.7 370.7 158.0 371.3 157.3 372.5 158.2 375.5 161.8 376.5 162.0 376.8 161.2 373.2 156.8 373.2 156.2 376.3 152.8 376.5 151.8 375.2 152.0 371.7 155.8 371.0 155.8 370.5 155.0 370.7 152.3 370.2 151.8ZM355.0 151.8 354.8 152.8 358.0 157.5 358.2 161.5 358.8 162.0 359.5 161.8 359.8 161.2 359.8 157.5 362.7 153.2 362.8 152.0 361.7 152.0 359.8 155.2 359.2 155.8 358.5 155.8 355.8 151.8ZM313.3 151.8 313.0 152.2 312.8 155.3 313.0 161.7 313.8 161.8 314.2 161.5 314.2 155.5 314.7 155.2 316.0 156.3 319.2 160.7 320.3 161.8 321.2 161.8 321.5 161.5 321.5 152.3 320.5 151.8 320.0 152.5 320.2 157.7 319.3 158.5 314.0 151.8ZM287.2 151.8 286.8 152.7 286.8 161.0 287.2 161.8 292.5 162.0 292.7 161.2 292.3 160.8 289.0 160.8 288.3 160.3 288.2 152.3 287.8 151.8ZM236.0 151.8 236.0 152.8 239.0 157.3 239.3 158.5 239.2 161.2 239.8 162.0 240.3 162.0 240.8 161.5 241.0 157.5 243.7 153.3 244.0 152.2 243.8 151.8 242.8 152.0 240.8 155.5 239.7 155.8 237.5 152.3ZM208.3 152.3 208.3 161.3 209.3 161.7 209.7 161.2 209.5 155.7 210.5 155.2 215.2 161.5 216.0 162.0 216.7 161.8 217.0 158.0 216.8 152.2 216.0 151.8 215.5 152.3 215.5 158.0 214.8 158.3 210.0 152.3 209.2 151.8ZM342.5 151.7 342.2 152.0 342.5 152.8 346.3 152.8 346.8 153.2 346.8 153.8 342.2 160.3 341.8 161.7 342.2 162.0 348.8 162.0 349.3 161.5 348.7 160.8 344.7 160.8 344.2 160.0 348.8 153.5 349.3 152.2 348.7 151.7ZM302.2 151.7 301.0 152.8 299.7 156.8 298.0 160.2 297.8 161.7 298.7 161.8 300.7 159.0 303.8 159.0 304.8 159.8 305.3 161.2 306.5 162.0 306.8 160.8 303.7 152.7ZM302.2 154.3 302.8 154.7 303.8 156.7 303.8 157.7 303.2 158.2 301.5 158.2 300.8 157.5 301.0 156.3ZM263.0 152.0 261.2 151.7 258.5 151.7 258.0 152.0 257.7 160.3 258.0 161.8 258.5 162.0 259.2 161.3 259.2 159.0 259.7 158.3 263.0 157.8 264.5 156.2 264.8 154.2ZM259.7 153.0 261.7 152.8 262.8 153.5 263.3 155.0 262.3 156.7 260.7 157.0 259.2 156.3 259.2 153.5ZM230.3 151.7 223.3 151.7 223.0 152.0 223.0 152.7 223.7 153.0 225.2 152.8 226.0 153.7 226.0 161.5 226.5 162.0 227.5 161.5 227.5 153.7 228.7 152.8 230.5 152.8 230.8 152.2ZM196.3 151.7 195.5 152.5 195.5 161.3 196.2 162.0 201.2 162.2 201.8 161.7 201.7 161.0 197.8 160.8 197.0 160.0 197.0 158.2 197.7 157.3 200.0 157.3 200.5 157.0 200.0 156.2 197.7 156.2 197.0 155.5 197.0 153.5 197.8 152.8 201.5 152.8 201.8 152.2 201.3 151.7ZM188.7 152.2 187.7 151.7 186.5 152.7 183.8 157.7 183.0 158.0 181.3 155.8 179.5 152.3 178.2 151.8 177.7 152.5 177.8 161.7 178.7 161.8 179.0 161.3 178.8 156.2 179.0 155.5 179.7 155.3 182.0 159.5 183.0 160.5 183.8 160.2 186.0 156.0 186.7 155.7 187.2 156.3 187.0 161.2 187.7 162.0 188.5 161.8 188.8 161.2ZM166.8 151.7 166.0 152.3 162.5 161.7 163.5 161.8 165.3 159.0 168.0 158.8 169.7 160.0 170.3 161.7 171.3 162.0 171.7 161.0 169.2 155.5 168.7 153.5 167.8 152.0ZM167.0 154.5 167.8 155.0 168.7 157.5 167.7 158.2 166.3 158.2 165.5 157.5 166.2 155.3ZM151.2 151.7 150.5 152.2 150.7 152.7 153.0 152.8 153.8 153.5 153.8 161.3 154.2 161.8 154.8 161.8 155.0 153.7 156.2 152.8 158.0 152.8 158.5 152.2 157.8 151.7ZM138.8 151.8 138.3 152.5 138.5 161.7 139.7 161.8 139.8 158.7 140.8 157.8 142.0 158.7 144.3 161.8 145.3 162.0 145.7 161.7 145.5 161.0 143.2 158.2 143.2 157.3 144.8 155.8 144.8 153.2 143.0 151.8ZM140.5 152.8 142.2 152.8 143.7 154.0 143.7 155.3 142.2 156.7 140.7 156.8 140.0 156.3 139.8 153.7ZM127.5 151.7 126.3 153.0 123.0 161.7 123.3 162.0 124.2 161.8 125.3 159.5 126.2 159.0 128.8 158.8 130.0 159.5 131.0 161.7 131.8 162.0 132.3 161.0 128.7 152.2ZM127.3 154.3 128.3 154.8 129.2 157.5 128.3 158.2 127.0 158.2 126.2 157.5ZM117.3 152.2 115.2 151.7 112.2 151.8 111.8 152.7 111.8 161.3 112.2 161.8 113.0 161.5 113.0 159.5 113.5 158.3 117.0 157.8 118.3 156.5 118.7 153.8ZM113.5 153.0 115.5 152.8 116.8 153.7 117.2 155.2 116.5 156.5 114.3 157.0 113.2 156.3 113.0 153.8ZM100.8 151.7 100.0 152.5 96.5 161.7 96.8 162.0 97.7 161.8 98.3 160.2 99.3 159.0 102.3 158.8 103.7 159.7 104.3 161.7 105.3 162.0 105.8 161.0 104.8 159.3 103.7 155.7 101.8 152.0ZM101.2 154.2 101.7 154.3 102.7 157.2 102.0 158.2 100.5 158.2 99.7 157.3 100.2 155.3ZM332.3 151.5 330.2 152.2 328.5 153.8 327.8 156.2 328.0 158.8 328.7 160.2 330.5 161.8 333.8 162.2 335.3 161.7 336.2 160.5 335.2 160.2 334.2 160.8 331.7 160.8 330.2 159.7 329.2 157.3 329.5 155.3 330.3 153.8 331.3 153.0 333.8 152.8 335.2 153.5 336.0 153.0 335.3 152.0ZM274.8 151.5 272.7 152.2 271.2 153.5 270.0 156.0 270.0 157.8 271.2 160.2 272.3 161.3 274.3 162.2 276.3 162.2 277.7 161.8 279.5 160.3 280.5 157.7 280.5 156.0 279.7 153.5 278.3 152.3 276.0 151.5ZM273.8 153.0 276.8 153.0 277.7 153.5 278.8 155.2 278.8 158.5 276.8 160.7 273.8 160.7 272.0 158.8 271.8 155.3 272.2 154.5ZM319.0 148.8 318.0 148.8 316.8 150.5 317.8 150.7 318.8 149.8ZM168.3 105.2 166.8 105.3 166.2 106.3 164.7 111.2 163.0 114.8 162.7 116.7 157.7 129.2 156.3 130.8 154.0 132.5 161.8 132.5 159.5 130.3 159.5 129.5 161.0 124.3 162.2 121.7 163.2 120.8 170.2 120.8 170.8 121.3 173.8 129.8 173.7 130.8 171.7 132.5 180.0 132.5 177.2 130.3 175.8 127.5 174.5 122.8 173.0 119.5 172.7 117.2 171.0 113.3 170.7 111.2ZM166.5 109.8 167.8 111.2 169.0 116.0 170.0 118.0 169.8 119.0 169.2 119.5 163.8 119.3 163.3 118.8 165.2 112.5ZM446.3 105.0 445.2 105.2 444.2 106.5 440.8 116.7 440.0 118.0 438.8 122.0 435.8 129.2 434.5 130.8 432.3 132.5 440.3 132.5 437.8 130.7 437.7 129.0 440.0 122.2 441.3 120.8 448.3 120.8 449.0 121.3 451.8 129.5 451.8 130.7 450.2 132.5 458.3 132.5 455.2 130.0 453.8 127.3 452.8 123.3 451.8 121.5 450.8 117.2 449.8 115.3 448.8 111.2 448.0 109.8 447.0 105.8ZM444.7 109.8 445.3 109.8 445.7 110.3 446.0 112.3 446.8 113.7 448.0 118.7 447.2 119.5 442.2 119.3 441.5 118.5 444.0 110.7ZM367.2 105.0 366.8 105.2 367.0 105.8 368.5 106.0 369.8 107.0 370.2 114.0 370.0 130.2 367.5 132.5 375.7 132.5 373.7 131.0 372.8 129.8 372.8 107.7 373.8 106.2 375.3 106.0 375.8 105.2ZM252.3 105.0 252.3 105.8 254.5 106.2 255.5 107.5 255.7 124.3 256.0 127.3 257.3 129.7 259.3 131.7 262.3 132.8 269.7 132.8 272.5 131.7 274.7 129.7 275.8 127.5 276.8 122.2 277.0 107.8 277.8 106.5 279.5 105.8 279.7 105.2 272.0 105.2 272.2 105.8 274.2 106.3 275.2 108.0 275.3 119.5 275.0 125.3 273.8 128.3 272.2 130.2 270.3 131.0 266.7 131.5 263.3 130.8 261.3 129.8 260.0 128.5 259.0 126.7 258.3 122.5 258.3 108.7 258.8 106.8 259.8 106.0 261.0 105.8 261.2 105.2ZM214.7 105.2 214.8 105.8 217.2 106.3 218.0 107.7 218.0 129.5 217.7 130.5 215.2 132.5 223.7 132.3 221.7 131.0 220.8 129.7 220.8 120.8 221.7 120.0 224.2 120.0 225.7 121.2 230.3 128.3 233.2 131.5 235.8 132.3 239.2 132.7 239.3 132.2 236.3 130.5 233.7 127.8 227.8 119.7 228.0 118.8 231.3 116.2 232.8 113.2 232.8 110.5 231.3 107.5 229.8 106.2 226.8 105.0ZM221.7 106.2 223.7 106.0 226.7 106.8 228.8 108.7 229.8 111.0 229.5 115.3 228.8 116.7 226.5 118.5 222.5 118.8 221.5 118.7 220.8 117.8 220.8 107.5ZM119.0 105.0 118.7 105.3 119.0 105.8 121.5 106.3 122.2 107.5 122.2 129.8 121.5 131.0 119.2 132.5 135.8 132.7 137.5 132.0 138.8 128.5 139.0 125.8 138.2 126.5 136.7 129.3 134.7 131.0 126.5 131.0 125.2 130.0 124.8 126.5 125.0 107.5 125.8 106.3 127.3 106.0 128.0 105.3 127.7 105.0ZM83.3 105.0 83.3 105.8 85.2 106.0 86.3 107.0 86.8 108.7 86.7 129.5 85.8 131.0 83.3 132.3 83.7 132.7 85.7 132.3 100.0 132.7 101.5 132.3 102.7 130.5 103.8 127.2 103.7 125.5 103.0 125.8 101.0 129.5 99.2 131.0 92.7 131.2 90.0 130.5 89.7 129.2 89.7 108.0 90.5 106.2 92.7 105.5 92.3 105.0ZM58.2 105.0 58.0 105.8 59.7 106.0 60.7 106.7 61.2 109.0 61.0 130.3 58.5 132.5 66.8 132.5 64.5 130.8 63.8 129.7 63.8 107.8 64.5 106.5 66.7 105.8 66.8 105.2ZM16.3 105.0 16.3 105.8 18.5 106.2 19.7 107.3 20.8 109.5 26.0 124.0 27.0 125.7 28.0 129.7 29.2 132.2 29.7 132.7 30.7 132.5 39.8 109.7 41.2 107.2 42.7 106.0 44.3 105.7 44.3 105.2 36.0 105.2 36.2 105.8 37.8 106.0 38.8 106.7 39.0 108.3 36.0 115.2 32.8 124.0 32.0 125.2 31.7 126.7 30.8 127.2 29.8 126.0 28.8 122.5 28.0 121.2 26.8 117.2 26.0 116.0 24.7 111.5 24.0 110.7 23.0 107.7 23.5 106.2 25.2 105.8 25.5 105.3 25.0 105.0ZM327.3 104.7 326.8 105.8 326.3 110.8 327.5 110.2 328.8 107.2 330.3 106.3 336.3 106.3 337.0 107.3 336.8 130.0 336.0 131.0 333.3 132.5 343.3 132.5 340.3 130.2 340.0 128.5 340.0 107.0 340.8 106.3 347.3 106.5 348.7 107.5 349.0 110.3 349.8 110.8 350.3 110.0 350.7 105.2 350.3 104.8 337.2 105.2ZM403.2 105.0 400.0 106.3 397.7 108.0 395.3 110.5 394.2 112.7 393.0 117.0 393.2 121.8 394.0 124.7 395.2 127.2 396.7 129.0 400.5 131.8 405.8 133.0 411.0 133.0 414.3 132.3 416.7 129.7 417.7 127.2 417.5 126.5 414.0 130.3 411.5 131.7 409.7 132.0 406.5 131.8 401.3 129.7 399.0 127.3 397.0 123.7 396.5 119.7 397.0 112.7 399.2 109.0 401.2 107.2 403.3 106.0 406.7 105.5 412.2 106.0 414.8 108.0 415.5 111.2 416.3 111.3 416.7 110.8 417.0 105.7 416.3 105.0 410.2 104.2 407.8 104.2ZM309.8 105.0 305.5 104.2 300.8 104.8 298.0 106.8 296.3 109.5 296.2 113.2 297.3 115.5 299.7 118.0 305.7 122.0 307.8 124.3 308.2 125.5 308.0 129.2 306.8 130.7 305.0 132.0 300.0 131.7 297.7 129.8 296.0 126.5 295.2 126.2 295.0 127.2 295.8 131.0 297.0 132.3 299.8 133.0 305.3 132.8 308.3 131.2 309.7 129.8 310.7 128.0 311.0 124.2 310.0 121.5 307.8 119.3 301.0 115.0 298.8 111.8 298.8 108.8 299.3 107.8 300.8 106.2 303.3 105.2 307.2 106.0 308.5 107.8 309.0 110.3 309.7 110.5 310.3 105.8ZM213.3 80.3 212.0 80.8 211.8 81.5 212.3 82.0 213.0 81.7ZM328.8 75.5 328.8 76.5 329.5 77.2 334.8 77.5 340.5 77.0 360.2 77.3 361.5 77.7 373.3 77.7 374.5 77.2 377.8 77.7 382.8 77.7 384.0 77.3 418.0 77.7 419.7 77.0 422.3 77.0 425.8 77.8 468.3 77.2 469.0 78.2 469.0 86.5 468.7 87.3 469.0 92.5 469.2 135.3 468.8 156.7 467.8 157.2 456.3 157.2 455.5 157.5 452.0 157.0 436.7 157.0 434.0 157.3 433.0 157.0 394.7 156.8 394.2 157.2 394.0 158.7 394.8 159.8 409.2 160.2 421.7 159.8 423.7 159.2 431.7 159.8 471.3 159.8 471.7 159.5 471.7 126.5 472.0 122.3 470.8 113.2 470.8 111.0 471.7 107.2 471.7 81.0 471.3 75.7 471.0 75.2 461.7 75.0 460.2 75.7 451.7 75.0 441.0 75.0 439.5 75.5 434.8 75.7 433.7 75.2 421.5 74.8 416.2 75.0 412.5 75.8 410.8 75.2 406.3 75.5 385.7 74.7 384.3 75.0 375.3 75.0 373.5 75.7 369.7 75.0 337.3 75.2 335.0 75.5 329.5 75.0ZM144.8 75.5 144.2 75.0 140.0 75.5 136.5 75.2 104.2 75.0 100.3 75.7 98.7 75.0 89.5 75.0 88.2 74.7 67.7 75.5 63.2 75.2 61.2 75.8 56.3 74.8 40.2 75.2 39.0 75.7 32.8 75.0 22.2 75.0 13.8 75.7 12.2 75.0 3.0 75.2 2.2 81.7 2.0 105.5 3.0 110.7 2.8 117.5 1.7 122.8 2.3 127.8 1.8 134.8 2.2 159.7 42.2 159.8 50.3 159.2 52.0 159.8 64.7 160.2 79.0 159.8 79.8 158.8 79.8 157.7 79.2 156.8 40.7 157.0 39.7 157.3 37.5 157.0 21.8 157.0 18.2 157.5 17.5 157.2 6.0 157.2 4.8 156.3 5.2 88.2 4.8 78.5 5.7 77.2 48.0 77.8 51.5 77.0 54.0 77.0 56.0 77.7 83.8 77.3 95.7 77.7 98.8 77.2 100.5 77.7 112.5 77.7 113.7 77.3 126.2 77.3 128.2 77.0 134.0 77.0 138.7 77.5 144.3 77.2 144.8 76.7ZM178.0 57.5 177.8 59.7 180.7 63.3 181.8 63.8 186.8 63.8 193.3 66.8 196.2 67.0 196.8 67.8 197.0 71.0 198.2 73.8 203.3 81.2 204.7 82.3 205.5 82.3 205.7 81.2 204.5 79.5 204.8 77.7 204.0 76.8 203.8 76.0 204.8 75.3 205.0 73.3 205.5 73.0 206.5 73.5 206.7 73.2 206.0 70.7 206.5 70.0 207.3 69.8 207.3 67.8 208.2 66.5 208.8 66.8 209.2 67.7 209.2 71.3 210.8 74.0 210.8 74.8 209.8 76.3 210.7 76.8 211.7 76.0 212.8 77.2 211.5 79.2 209.3 80.5 209.2 81.3 209.5 81.7 210.5 81.7 212.0 79.0 213.3 79.0 215.8 76.8 216.0 73.5 217.5 72.2 218.8 73.2 218.0 75.2 218.2 76.2 219.8 76.5 220.0 79.2 219.8 80.3 219.2 81.2 219.3 81.7 220.2 81.5 221.5 79.8 223.3 80.2 223.8 77.0 224.3 76.3 225.0 77.0 225.5 79.3 227.0 80.3 227.7 80.0 227.8 78.2 228.5 77.7 229.0 78.3 229.2 80.3 230.2 82.5 230.2 83.5 231.7 85.8 231.2 87.2 231.2 89.2 232.5 88.8 233.2 89.7 233.7 89.7 234.0 88.7 234.7 88.5 235.0 89.0 235.0 91.2 236.2 92.7 237.2 92.5 237.8 91.5 237.8 87.5 239.3 85.8 239.7 83.3 240.8 82.5 240.7 80.2 241.8 78.3 242.0 75.5 242.7 75.2 243.8 79.0 244.0 81.3 245.3 82.0 246.0 83.2 245.5 85.2 246.2 85.8 247.5 85.8 248.0 89.0 249.8 91.7 249.8 94.3 250.8 95.0 250.3 97.5 252.2 98.3 253.0 98.0 253.0 96.5 254.7 95.7 253.7 93.8 254.7 92.7 255.2 91.0 255.8 91.3 256.3 93.0 257.5 92.8 258.3 94.7 261.0 95.3 260.8 92.3 260.2 91.7 259.5 89.8 259.8 88.5 259.5 86.8 261.3 86.7 262.0 86.0 263.2 82.7 264.5 83.3 265.5 82.8 265.8 76.7 267.3 75.5 269.5 76.0 270.3 74.8 271.7 74.5 271.7 73.2 271.2 72.3 273.0 70.5 272.8 69.3 273.2 69.0 273.8 69.7 273.8 71.2 275.3 72.3 275.3 73.7 276.0 74.5 275.7 78.0 276.2 79.7 276.8 79.7 277.5 78.3 278.7 77.8 279.0 78.2 278.8 79.5 280.0 80.8 281.8 81.0 283.0 82.2 283.3 85.2 285.3 83.7 286.2 82.3 287.7 82.5 288.0 81.3 289.0 80.3 290.5 79.8 290.5 79.2 289.8 78.5 290.3 76.2 290.8 76.0 292.3 77.5 293.7 77.5 295.3 78.7 296.0 78.2 295.7 75.0 293.8 71.5 292.3 69.8 284.7 64.3 279.0 62.0 272.2 61.0 266.0 61.2 258.2 62.0 255.7 62.8 247.8 64.0 245.7 64.8 239.3 66.0 233.7 65.8 227.0 64.3 224.3 64.3 222.7 64.8 221.0 64.5 214.0 53.2 213.0 51.0 213.0 49.3 213.5 49.0 222.0 48.8 227.8 46.8 231.7 44.8 236.7 40.5 247.7 28.7 249.0 27.8 251.0 27.7 254.3 25.3 258.5 20.8 260.0 17.3 259.7 15.5 258.5 15.5 251.0 22.8 247.3 24.8 246.2 24.8 245.5 24.0 245.8 21.7 249.0 18.8 251.7 15.5 251.8 13.7 250.7 13.2 246.2 16.5 245.7 16.0 245.7 9.2 245.2 8.0 244.2 7.3 243.3 8.0 243.0 9.0 243.0 14.3 241.7 18.8 237.2 19.0 232.5 17.7 232.0 17.2 232.0 15.7 232.8 13.8 233.2 6.2 233.0 3.2 232.2 1.8 230.7 2.0 229.8 3.3 229.0 12.7 226.8 19.8 224.8 24.0 221.3 28.3 218.8 30.8 215.7 33.0 212.7 33.0 210.8 31.3 209.7 28.7 209.8 24.8 213.2 19.0 213.2 17.8 212.7 17.3 211.3 17.5 207.3 22.5 205.8 27.7 206.2 31.5 208.2 35.0 209.8 36.8 209.8 37.7 208.7 38.8 206.5 39.7 204.8 39.7 202.5 38.7 199.8 35.3 199.5 32.8 200.3 29.7 199.7 29.0 198.5 29.0 197.5 30.8 197.0 33.5 197.2 36.3 196.8 36.7 195.8 36.2 195.0 34.3 195.0 32.3 194.5 31.3 193.5 31.5 193.0 32.3 193.2 34.8 192.8 35.3 192.3 35.3 190.8 33.8 189.3 33.8 189.0 35.2 191.5 39.0 193.2 40.7 198.3 43.0 198.8 44.3 197.0 46.0 194.7 47.0 193.2 47.2 189.0 49.2 184.3 52.3 181.5 54.8 179.0 56.2ZM240.8 23.5 239.0 29.3 236.8 33.3 233.3 36.7 231.3 37.2 230.3 35.7 230.8 32.8 232.8 29.7 233.8 26.5 233.7 25.3 232.7 25.0 231.2 26.2 228.2 30.5 226.2 36.2 225.8 38.8 224.2 41.5 221.8 43.0 219.5 43.5 217.0 43.5 213.7 42.5 213.7 41.3 220.8 35.5 225.2 30.7 231.0 23.2 232.8 22.3 236.8 23.0 240.3 23.0Z"/></symbol>
+<symbol id="jelen" viewBox="5 0 120 100"><path fill="currentColor" fill-rule="evenodd" d="M41.3 80.3 40.0 80.8 39.8 81.5 40.3 82.0 41.0 81.7ZM6.0 57.5 5.8 59.7 8.7 63.3 9.8 63.8 14.8 63.8 21.3 66.8 24.2 67.0 24.8 67.8 25.0 71.0 26.2 73.8 31.3 81.2 32.7 82.3 33.5 82.3 33.7 81.2 32.5 79.5 32.8 77.7 32.0 76.8 31.8 76.0 32.8 75.3 33.0 73.3 33.5 73.0 34.5 73.5 34.7 73.2 34.0 70.7 34.5 70.0 35.3 69.8 35.3 67.8 36.2 66.5 36.8 66.8 37.2 67.7 37.2 71.3 38.8 74.0 38.8 74.8 37.8 76.3 38.7 76.8 39.7 76.0 40.8 77.2 39.5 79.2 37.3 80.5 37.2 81.3 37.5 81.7 38.5 81.7 40.0 79.0 41.3 79.0 43.8 76.8 44.0 73.5 45.5 72.2 46.8 73.2 46.0 75.2 46.2 76.2 47.8 76.5 48.0 79.2 47.8 80.3 47.2 81.2 47.3 81.7 48.2 81.5 49.5 79.8 51.3 80.2 51.8 77.0 52.3 76.3 53.0 77.0 53.5 79.3 55.0 80.3 55.7 80.0 55.8 78.2 56.5 77.7 57.0 78.3 57.2 80.3 58.2 82.5 58.2 83.5 59.7 85.8 59.2 87.2 59.2 89.2 60.5 88.8 61.2 89.7 61.7 89.7 62.0 88.7 62.7 88.5 63.0 89.0 63.0 91.2 64.2 92.7 65.2 92.5 65.8 91.5 65.8 87.5 67.3 85.8 67.7 83.3 68.8 82.5 68.7 80.2 69.8 78.3 70.0 75.5 70.7 75.2 71.8 79.0 72.0 81.3 73.3 82.0 74.0 83.2 73.5 85.2 74.2 85.8 75.5 85.8 76.0 89.0 77.8 91.7 77.8 94.3 78.8 95.0 78.3 97.5 80.2 98.3 81.0 98.0 81.0 96.5 82.7 95.7 81.7 93.8 82.7 92.7 83.2 91.0 83.8 91.3 84.3 93.0 85.5 92.8 86.3 94.7 89.0 95.3 88.8 92.3 88.2 91.7 87.5 89.8 87.8 88.5 87.5 86.8 89.3 86.7 90.0 86.0 91.2 82.7 92.5 83.3 93.5 82.8 93.8 76.7 95.3 75.5 97.5 76.0 98.3 74.8 99.7 74.5 99.7 73.2 99.2 72.3 101.0 70.5 100.8 69.3 101.2 69.0 101.8 69.7 101.8 71.2 103.3 72.3 103.3 73.7 104.0 74.5 103.7 78.0 104.2 79.7 104.8 79.7 105.5 78.3 106.7 77.8 107.0 78.2 106.8 79.5 108.0 80.8 109.8 81.0 111.0 82.2 111.3 85.2 113.3 83.7 114.2 82.3 115.7 82.5 116.0 81.3 117.0 80.3 118.5 79.8 118.5 79.2 117.8 78.5 118.3 76.2 118.8 76.0 120.3 77.5 121.7 77.5 123.3 78.7 124.0 78.2 123.7 75.0 121.8 71.5 120.3 69.8 112.7 64.3 107.0 62.0 100.2 61.0 94.0 61.2 86.2 62.0 83.7 62.8 75.8 64.0 73.7 64.8 67.3 66.0 61.7 65.8 55.0 64.3 52.3 64.3 50.7 64.8 49.0 64.5 42.0 53.2 41.0 51.0 41.0 49.3 41.5 49.0 50.0 48.8 55.8 46.8 59.7 44.8 64.7 40.5 75.7 28.7 77.0 27.8 79.0 27.7 82.3 25.3 86.5 20.8 88.0 17.3 87.7 15.5 86.5 15.5 79.0 22.8 75.3 24.8 74.2 24.8 73.5 24.0 73.8 21.7 77.0 18.8 79.7 15.5 79.8 13.7 78.7 13.2 74.2 16.5 73.7 16.0 73.7 9.2 73.2 8.0 72.2 7.3 71.3 8.0 71.0 9.0 71.0 14.3 69.7 18.8 65.2 19.0 60.5 17.7 60.0 17.2 60.0 15.7 60.8 13.8 61.2 6.2 61.0 3.2 60.2 1.8 58.7 2.0 57.8 3.3 57.0 12.7 54.8 19.8 52.8 24.0 49.3 28.3 46.8 30.8 43.7 33.0 40.7 33.0 38.8 31.3 37.7 28.7 37.8 24.8 41.2 19.0 41.2 17.8 40.7 17.3 39.3 17.5 35.3 22.5 33.8 27.7 34.2 31.5 36.2 35.0 37.8 36.8 37.8 37.7 36.7 38.8 34.5 39.7 32.8 39.7 30.5 38.7 27.8 35.3 27.5 32.8 28.3 29.7 27.7 29.0 26.5 29.0 25.5 30.8 25.0 33.5 25.2 36.3 24.8 36.7 23.8 36.2 23.0 34.3 23.0 32.3 22.5 31.3 21.5 31.5 21.0 32.3 21.2 34.8 20.8 35.3 20.3 35.3 18.8 33.8 17.3 33.8 17.0 35.2 19.5 39.0 21.2 40.7 26.3 43.0 26.8 44.3 25.0 46.0 22.7 47.0 21.2 47.2 17.0 49.2 12.3 52.3 9.5 54.8 7.0 56.2ZM68.8 23.5 67.0 29.3 64.8 33.3 61.3 36.7 59.3 37.2 58.3 35.7 58.8 32.8 60.8 29.7 61.8 26.5 61.7 25.3 60.7 25.0 59.2 26.2 56.2 30.5 54.2 36.2 53.8 38.8 52.2 41.5 49.8 43.0 47.5 43.5 45.0 43.5 41.7 42.5 41.7 41.3 48.8 35.5 53.2 30.7 59.0 23.2 60.8 22.3 64.8 23.0 68.3 23.0Z"/></symbol>
+  <symbol id="str" viewBox="0 0 20 20"><path d="M7.5 4 13.5 10l-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"/></symbol>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Villa Rustica - apartamenty Polańczyk, strona główna"><svg aria-hidden="true"><use href="#logo"/></svg></a>
+    <nav class="menu" id="menu" aria-label="Menu główne">
+      <a href="#apartamenty">Apartamenty</a>
+      <a href="#bez-recepcji">Bez recepcji</a>
+      <a href="#okolica">Okolica</a>
+      <a href="#cafe">Rustica Cafe</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="tel" href="tel:+48530090530">530 090 530</a>
+      <a class="btn" href="#rezerwacja">Sprawdź termin</a>
+    </nav>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Otwórz menu"><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  <picture>
+    <source media="(max-width:767px)" srcset="img/hero-m-480.webp 480w, img/hero-m-760.webp 760w" sizes="100vw">
+    <img src="img/hero-1600.webp" srcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2000.webp 2000w" sizes="100vw" width="2000" height="1334" alt="Jezioro Solińskie w Polańczyku, widok na Bieszczady" fetchpriority="high">
+  </picture>
+  <div class="rama" aria-hidden="true"></div>
+  <div class="tresc">
+    <svg class="jelen" aria-hidden="true"><use href="#jelen"/></svg>
+    <h1 id="h1">Apartamenty w Polańczyku nad Soliną</h1>
+    <p class="lead">Bieszczady za oknem, klucz w telefonie. Klimatyzowane apartamenty w centrum uzdrowiska, z zameldowaniem bez recepcji.</p>
+    <div class="akcje">
+      <a class="btn bia" href="#rezerwacja">Sprawdź wolne terminy</a>
+      <a class="tel" href="tel:+48530090530">Rezerwacje: <b>530 090 530</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="sek apart" id="apartamenty" aria-labelledby="h-apart">
+  <div class="wrap">
+    <h2 class="tyt" id="h-apart">Apartamenty</h2>
+    <div class="wst">
+      <p>Villa Rustica powstała dla Gości, którzy w Bieszczadach chcą kontaktu z naturą, ale nie rezygnują z wygody. Stoi w centrum uzdrowiska Polańczyk, nad Jeziorem Solińskim.</p>
+      <p>Apartamenty są klimatyzowane i urządzone w górskim klimacie: drewniane belki, kratka na ścianach, brzozowy las na tapetach i jeleń na poduszkach. Dźwiękochłonne okna dają ciszę, a wentylacja dostarcza świeże bieszczadzkie powietrze do każdego pomieszczenia przez całą dobę.</p>
+    </div>
+  </div>
+  <div class="pas">
+    <div class="tor" id="tor-a" tabindex="0" aria-label="Zdjęcia apartamentów, przewiń w bok">
+      <button class="kad" type="button" data-lb="img/a1-full.webp"><img src="img/a1-600.webp" srcset="img/a1-600.webp 600w, img/a1-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Sypialnia z kratką i drewnianą belką" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/a2-full.webp"><img src="img/a2-600.webp" srcset="img/a2-600.webp 600w, img/a2-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Sypialnia z jeleniem na poduszkach" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/a3-full.webp"><img src="img/a3-600.webp" srcset="img/a3-600.webp 600w, img/a3-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Część dzienna z sofą i stołem" loading="lazy" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/a4-full.webp"><img src="img/a4-600.webp" srcset="img/a4-600.webp 600w, img/a4-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Salon z aneksem w apartamencie" loading="lazy" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/a5-full.webp"><img src="img/a5-600.webp" srcset="img/a5-600.webp 600w, img/a5-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Pokój z telewizorem i komodą" loading="lazy" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/a6-full.webp"><img src="img/a6-600.webp" srcset="img/a6-600.webp 600w, img/a6-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Aneks kuchenny z kaflami" loading="lazy" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/a7-full.webp"><img src="img/a7-600.webp" srcset="img/a7-600.webp 600w, img/a7-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Kącik przy stole z kwiatami" loading="lazy" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/a8-full.webp"><img src="img/a8-600.webp" srcset="img/a8-600.webp 600w, img/a8-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Łazienka z kabiną prysznicową" loading="lazy" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/a9-full.webp"><img src="img/a9-600.webp" srcset="img/a9-600.webp 600w, img/a9-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Aneks i szafa w stylu rustykalnym" loading="lazy" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/a10-full.webp"><img src="img/a10-600.webp" srcset="img/a10-600.webp 600w, img/a10-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Klatka schodowa z cegłą" loading="lazy" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/a11-full.webp"><img src="img/a11-600.webp" srcset="img/a11-600.webp 600w, img/a11-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Sypialnia w kratkę" loading="lazy" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/a12-full.webp"><img src="img/a12-600.webp" srcset="img/a12-600.webp 600w, img/a12-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Sypialnia z drewnianym łóżkiem" loading="lazy" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/a13-full.webp"><img src="img/a13-600.webp" srcset="img/a13-600.webp 600w, img/a13-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Ręczniki w łazience" loading="lazy" decoding="async"></button>
+    </div>
+    <div class="ster"><span class="licz" aria-live="polite"></span><button type="button" class="p" aria-label="Poprzednie zdjęcia"><svg style="transform:scaleX(-1)"><use href="#str"/></svg></button><button type="button" class="n" aria-label="Następne zdjęcia"><svg><use href="#str"/></svg></button></div>
+  </div>
+</section>
+
+<section class="klucz" id="bez-recepcji" aria-labelledby="h-klucz">
+  <div class="wrap">
+    <div>
+      <h2 class="tyt" id="h-klucz">Klucz w telefonie</h2>
+      <p class="opis">Bez kolejki do recepcji i bez kluczy do zgubienia. System rezerwacji jest dostępny całą dobę, a formalności załatwia się zdalnie albo na miejscu, przy konsoli dotykowej.</p>
+      <ul>
+        <li><b>Zameldowanie bez recepcji</b><span>Check-in i check-out zdalnie albo w obiekcie, przy konsoli dotykowej.</span></li>
+        <li><b>Klucz mobilny</b><span>Klucz do drzwi trafia na Państwa telefon, zamiast fizycznego klucza.</span></li>
+        <li><b>Kontakt z obsługą z pokoju</b><span>Interaktywne urządzenia z ekranem dotykowym w pokojach.</span></li>
+        <li><b>Świeże powietrze i cisza</b><span>Wentylacja 24h, wydajna klimatyzacja i dźwiękochłonne okna.</span></li>
+      </ul>
+    </div>
+    <figure>
+      <img src="img/korytarz-520.webp" srcset="img/korytarz-520.webp 520w, img/korytarz-820.webp 820w" sizes="(min-width:1000px) 560px, 92vw" width="820" height="1230" alt="Korytarz Villa Rustica z wejściami do apartamentów" loading="lazy" decoding="async">
+    </figure>
+  </div>
+</section>
+
+<section class="sek rez" id="rezerwacja" aria-labelledby="h-rez">
+  <div class="wrap">
+    <h2 class="tyt" id="h-rez">Wolne terminy i ceny</h2>
+    <div class="wst">
+      <p>Wybierz daty i liczbę osób, a kalendarz pokaże wolne apartamenty i ceny. Rezerwacja online działa całą dobę.</p>
+      <a class="btn" href="tel:+48530090530">Zadzwoń: 530 090 530</a>
+    </div>
+    <div class="okno" id="okno">
+      <img src="img/a2-900.webp" srcset="img/a2-600.webp 600w, img/a2-900.webp 900w, img/a2-full.webp 1600w" sizes="var(--w)" width="1600" height="1067" alt="" loading="lazy" decoding="async">
+      <div class="w">
+        <h3>Kalendarz rezerwacji online</h3>
+        <p>Wolne apartamenty i ceny na wybrane dni, rezerwacja od razu.</p>
+        <button class="btn bia" type="button" id="pokaz-kal">Pokaż wolne terminy</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sek okol" id="okolica" aria-labelledby="h-okol">
+  <div class="wrap">
+    <h2 class="tyt" id="h-okol">Polańczyk, Solina, Bieszczady</h2>
+    <div class="wst">
+      <p>Polańczyk to uzdrowisko nad Jeziorem Solińskim. Z apartamentu jest blisko i nad wodę, i na szlaki w głąb Bieszczad.</p>
+      <p>Poniżej zdjęcia z okolicy: połoniny, zapora w Solinie, jezioro i leśne szlaki.</p>
+    </div>
+  </div>
+  <div class="pas">
+    <div class="tor" id="tor-o" tabindex="0" aria-label="Zdjęcia okolicy, przewiń w bok">
+      <button class="kad" type="button" data-lb="img/o1-full.webp"><img src="img/o1-600.webp" srcset="img/o1-600.webp 600w, img/o1-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Zielone grzbiety Bieszczad" loading="lazy" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/o2-full.webp"><img src="img/o2-600.webp" srcset="img/o2-600.webp 600w, img/o2-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Kamienisty szlak grzbietem" loading="lazy" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/o3-full.webp"><img src="img/o3-600.webp" srcset="img/o3-600.webp 600w, img/o3-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Szlak na połoninę" loading="lazy" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/o4-full.webp"><img src="img/o4-600.webp" srcset="img/o4-600.webp 600w, img/o4-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Zapora w Solinie" loading="lazy" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/o5-full.webp"><img src="img/o5-600.webp" srcset="img/o5-600.webp 600w, img/o5-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Jezioro wśród lasów" loading="lazy" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/o6-full.webp"><img src="img/o6-600.webp" srcset="img/o6-600.webp 600w, img/o6-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Kwitnąca wierzbówka na zboczach" loading="lazy" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/o7-full.webp"><img src="img/o7-600.webp" srcset="img/o7-600.webp 600w, img/o7-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Kładka w lesie przy szlaku" loading="lazy" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/o8-full.webp"><img src="img/o8-600.webp" srcset="img/o8-600.webp 600w, img/o8-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Jezioro Solińskie" loading="lazy" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/o9-full.webp"><img src="img/o9-600.webp" srcset="img/o9-600.webp 600w, img/o9-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Bieszczadzkie doliny" loading="lazy" decoding="async"></button>
+      <button class="kad" type="button" data-lb="img/o10-full.webp"><img src="img/o10-600.webp" srcset="img/o10-600.webp 600w, img/o10-900.webp 900w" sizes="(min-width:1700px) 25vw, (min-width:1280px) 33vw, (min-width:900px) 42vw, (min-width:600px) 66vw, 84vw" width="900" height="675" alt="Widok z połoniny" loading="lazy" decoding="async"></button>
+    </div>
+    <div class="ster"><span class="licz" aria-live="polite"></span><button type="button" class="p" aria-label="Poprzednie zdjęcia"><svg style="transform:scaleX(-1)"><use href="#str"/></svg></button><button type="button" class="n" aria-label="Następne zdjęcia"><svg><use href="#str"/></svg></button></div>
+  </div>
+</section>
+
+<section class="cafe" id="cafe" aria-labelledby="h-cafe">
+  <div class="wrap">
+    <figure><img src="img/cafe-720.webp" srcset="img/cafe-720.webp 720w, img/cafe-1190.webp 1190w" sizes="(min-width:1000px) 56vw, 92vw" width="1190" height="479" alt="Wnętrze naleśnikarni i kawiarni Rustica Cafe" loading="lazy" decoding="async"></figure>
+    <div>
+      <h2 class="tyt" id="h-cafe">Rustica Cafe</h2>
+      <p>Zapraszamy do naszej nowej naleśnikarni i kawiarni. Naleśniki i kawa przed wyjściem na szlak albo po powrocie znad jeziora.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sek kont" id="kontakt" aria-labelledby="h-kont">
+  <div class="wrap">
+    <div>
+      <h2 class="tyt" id="h-kont">Kontakt</h2>
+      <div class="dane">
+        <b>Villa Rustica</b>
+        <span>ul. Zdrojowa 17/1, 38-610 Polańczyk</span>
+        <a class="duzy" href="tel:+48530090530">530 090 530</a>
+        <a href="mailto:rezerwacja@rustica.pl">rezerwacja@rustica.pl</a>
+      </div>
+      <div class="mapa" id="mapa">
+        <div class="zg"><span>Mapa: ul. Zdrojowa 17/1, Polańczyk</span></div>
+      </div>
+    </div>
+    <form id="form" novalidate>
+      <h3>Zapytanie o pobyt</h3>
+      <div class="r2">
+        <label>Imię i nazwisko<input name="imie" autocomplete="name"></label>
+        <label>Telefon lub e-mail<input name="kontakt" autocomplete="email"></label>
+      </div>
+      <div class="r2">
+        <label>Przyjazd<input type="date" name="od"></label>
+        <label>Wyjazd<input type="date" name="do"></label>
+      </div>
+      <label>Liczba osób<input type="number" name="osoby" min="1" max="12" value="2"></label>
+      <label>Wiadomość<textarea name="tresc" placeholder="Np. pytanie o apartament z dzieckiem albo dłuższy pobyt"></textarea></label>
+      <label class="zgoda"><input type="checkbox" name="zgoda">Wyrażam zgodę na przetwarzanie danych w celu odpowiedzi na zapytanie.</label>
+      <button class="btn" type="submit">Wyślij zapytanie</button>
+      <p class="ok" role="status">Dziękujemy, to formularz pokazowy. W docelowej stronie zapytanie trafi na rezerwacja@rustica.pl.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="stopka">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Villa Rustica, do góry strony"><svg aria-hidden="true"><use href="#logo"/></svg></a>
+    <div>
+      <h4>Villa Rustica</h4>
+      <ul><li>ul. Zdrojowa 17/1</li><li>38-610 Polańczyk</li><li><a href="tel:+48530090530">tel. 530 090 530</a></li><li><a href="mailto:rezerwacja@rustica.pl">rezerwacja@rustica.pl</a></li></ul>
+    </div>
+    <div>
+      <h4>Strona</h4>
+      <ul><li><a href="#apartamenty">Apartamenty</a></li><li><a href="#bez-recepcji">Bez recepcji</a></li><li><a href="#rezerwacja">Rezerwacja</a></li><li><a href="#okolica">Okolica</a></li><li><a href="#cafe">Rustica Cafe</a></li></ul>
+    </div>
+    <div class="fe">
+      <h4>Fundusze Europejskie</h4>
+      <p>TENTIA Jacek Kucharski realizuje projekt dofinansowany z Funduszy Europejskich: integracja systemów hotelowych i bezkontaktowa obsługa gości.</p>
+    </div>
+    <div class="dol">
+      <span>&copy; <span id="rok">2026</span> Villa Rustica, Polańczyk</span>
+      <a class="wylinka-badge" href="https://wylinka.pl/?utm_source=rustica.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
+    </div>
+  </div>
+</footer>
+
+<div class="pasek" id="pasek">
+  <a class="btn obr" href="tel:+48530090530">Zadzwoń</a>
+  <a class="btn" href="#rezerwacja">Wolne terminy</a>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+  <img alt="">
+  <p></p>
+  <button class="zam" type="button" aria-label="Zamknij"><svg viewBox="0 0 20 20"><path d="M5 5l10 10M15 5 5 15" stroke="currentColor" stroke-width="1.6"/></svg></button>
+  <button class="pop" type="button" aria-label="Poprzednie zdjęcie"><svg style="transform:scaleX(-1)"><use href="#str"/></svg></button>
+  <button class="nas" type="button" aria-label="Następne zdjęcie"><svg><use href="#str"/></svg></button>
+</div>
+
+<script>
+(function(){
+var d=document,top=d.getElementById('top'),menu=d.getElementById('menu'),bg=d.querySelector('.burger'),pasek=d.getElementById('pasek'),hero=d.querySelector('.hero'),kontaktWidoczny=false;
+d.getElementById('rok').textContent=new Date().getFullYear();
+function sc(){var y=window.scrollY;top.classList.toggle('sc',y>30);pasek.classList.toggle('on',y>hero.offsetHeight*.6&&!kontaktWidoczny)}
+window.addEventListener('scroll',sc,{passive:true});sc();
+function zamknij(){menu.classList.remove('open');top.classList.remove('open');bg.setAttribute('aria-expanded','false');bg.setAttribute('aria-label','Otwórz menu')}
+bg.addEventListener('click',function(){var o=menu.classList.toggle('open');top.classList.toggle('open',o);bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Zamknij menu':'Otwórz menu')});
+menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',zamknij)});
+d.addEventListener('keydown',function(e){if(e.key==='Escape')zamknij()});
+var linki={};menu.querySelectorAll('a[href^="#"]:not(.btn)').forEach(function(a){linki[a.getAttribute('href').slice(1)]=a});
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){var id=e.target.id,a=linki[id];if(id==='kontakt'){kontaktWidoczny=e.isIntersecting;sc()}if(e.isIntersecting){for(var k in linki)linki[k].classList.remove('on');if(a)a.classList.add('on')}})},{rootMargin:'-45% 0px -50% 0px'});
+  ['apartamenty','bez-recepcji','rezerwacja','okolica','cafe','kontakt'].forEach(function(id){io.observe(d.getElementById(id))});
+}
+/* pasy zdjec */
+d.querySelectorAll('.pas').forEach(function(p){
+  var k=p.querySelector('.tor'),licz=p.querySelector('.licz'),kp=p.querySelector('.p'),kn=p.querySelector('.n');
+  function krok(){return k.children[0].getBoundingClientRect().width+14}
+  function upd(){var n=k.children.length,end=k.scrollLeft+k.clientWidth>=k.scrollWidth-4,i=Math.min(n,Math.round(k.scrollLeft/krok())+1);licz.textContent=(end?n:i)+' / '+n;kp.disabled=k.scrollLeft<4;kn.disabled=end}
+  k.addEventListener('scroll',function(){requestAnimationFrame(upd)},{passive:true});
+  function go(dir){k.scrollBy({left:dir*krok(),behavior:'smooth'})}
+  kp.addEventListener('click',function(){go(-1)});kn.addEventListener('click',function(){go(1)});
+  window.addEventListener('resize',upd);upd();
+  var drag=null,moved=false;
+  k.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse'||k.scrollWidth<=k.clientWidth)return;drag={x:e.clientX,s:k.scrollLeft};moved=false});
+  window.addEventListener('pointermove',function(e){if(!drag)return;var dx=e.clientX-drag.x;if(Math.abs(dx)>5){moved=true;k.classList.add('drag')}k.scrollLeft=drag.s-dx});
+  window.addEventListener('pointerup',function(){if(!drag)return;drag=null;var s=k.scrollLeft,w=krok();k.classList.remove('drag');k.scrollLeft=s;k.scrollTo({left:Math.round(s/w)*w,behavior:'smooth'})});
+  k.addEventListener('click',function(e){if(moved){e.preventDefault();e.stopPropagation();moved=false}},true);
+  k.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();go(1)}if(e.key==='ArrowLeft'){e.preventDefault();go(-1)}});
+});
+/* lightbox w obrebie pasa */
+var lb=d.getElementById('lb'),li=lb.querySelector('img'),lp=lb.querySelector('p'),zd=[],cur=0,last=null;
+function pokaz(i){cur=(i+zd.length)%zd.length;var b=zd[cur],im=b.querySelector('img');li.src=im.currentSrc||im.src;li.alt=im.alt;lp.textContent=im.alt+'  ('+(cur+1)+' / '+zd.length+')';var big=b.getAttribute('data-lb');setTimeout(function(){if(zd[cur]===b){var t=new Image();t.onload=function(){if(zd[cur]===b)li.src=big};t.src=big}},180)}
+d.querySelectorAll('.tor').forEach(function(t){var grp=[].slice.call(t.querySelectorAll('[data-lb]'));grp.forEach(function(b,i){b.addEventListener('click',function(){zd=grp;last=b;pokaz(i);lb.classList.add('on');d.body.style.overflow='hidden';lb.querySelector('.zam').focus()})})});
+function lbz(){lb.classList.remove('on');d.body.style.overflow='';if(last)last.focus()}
+lb.querySelector('.zam').addEventListener('click',lbz);
+lb.querySelector('.pop').addEventListener('click',function(e){e.stopPropagation();pokaz(cur-1)});
+lb.querySelector('.nas').addEventListener('click',function(e){e.stopPropagation();pokaz(cur+1)});
+lb.addEventListener('click',function(e){if(e.target===lb)lbz()});
+d.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')lbz();if(e.key==='ArrowLeft')pokaz(cur-1);if(e.key==='ArrowRight')pokaz(cur+1)});
+var tx=null;lb.addEventListener('touchstart',function(e){tx=e.touches[0].clientX},{passive:true});
+lb.addEventListener('touchend',function(e){if(tx===null)return;var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50)pokaz(cur+(dx<0?1:-1));tx=null});
+/* kalendarz Hotres i mapa dopiero po kliknieciu */
+d.getElementById('pokaz-kal').addEventListener('click',function(){var o=d.getElementById('okno');o.classList.add('zal');o.innerHTML='<iframe src="https://booking.hotres.pl/v4_step1?oid=507&lang=pl" title="Kalendarz rezerwacji Villa Rustica"></iframe>'});
+var mapa=d.getElementById('mapa');function wstawMape(){mapa.innerHTML='<iframe src="https://www.google.com/maps?q=ul.+Zdrojowa+17/1,+38-610+Pola%C5%84czyk&output=embed" title="Mapa dojazdu do Villa Rustica" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'}
+if('IntersectionObserver' in window){var mo=new IntersectionObserver(function(es){if(es[0].isIntersecting){wstawMape();mo.disconnect()}},{rootMargin:'400px 0px'});mo.observe(mapa)}else wstawMape();
+d.getElementById('form').addEventListener('submit',function(e){e.preventDefault();this.classList.add('wyslano')});
+})();
+</script>
+</body>
+</html>
